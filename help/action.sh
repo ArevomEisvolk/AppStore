@@ -1,7 +1,7 @@
-sudo apt-get install jq
+#sudo apt-get install jq
 
 obj="{"
-for dir in Apps/*; do
+for dir in ../Apps/*; do
     result=$(cat ./$dir/appfile.json)
     tagline=$(echo "$result" | jq .tagline)
     title=$(echo "$result" | jq .title)
@@ -13,4 +13,4 @@ done
 obj=${obj%?}
 obj="${obj} }"
 data=$(echo "$obj" | jq .)
-echo "$data" > ./CasaOS-i18n/back-end/en_us.json
+echo "$data" > ../../config/appfile.json
