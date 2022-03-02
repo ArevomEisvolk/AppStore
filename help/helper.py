@@ -18,6 +18,6 @@ for index, app in enumerate(glob("AppStore/Apps/*/appfile.json",recursive=True))
 
     
 
-with open("/Users/are/Documents/Github/AreOS-Backend/config/appfile.json", "a") as af:
-    json.dump({"list" : li, "community" : [], "recommend" : []}, af)
+with open("/Users/are/Documents/Github/AreOS-Backend/config/appstore.json", "w") as af:
+    json.dump({"list" : li, "community" : [], "recommend" : []}, af, indent=4)
         

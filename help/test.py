@@ -4,4 +4,4 @@ with open("/Users/are/Documents/Github/AreOS-Backend/config/appfile.json", "r") 
 	appfile = json.load(file)
 	for i in appfile.get("list"):
 		if i.get("id") == 3:
-			print(i.get("id"))
+			print(i.get("container").get("image"))
