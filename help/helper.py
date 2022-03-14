@@ -10,13 +10,17 @@ def merge_two_dicts(x, y):
     """Given two dictionaries, merge them into a new dict as a shallow copy."""
     z = x.copy()
     z.update(y)
+    print(z)
     return z
+
+def replace_dict_id(x,  ids):
+    """Given two dictionaries, merge them into a new dict as a shallow copy."""
+    x["id"] = ids
+    return x
 
 def get_dict_value(dic, *args):
     value = dict()
     for i in args:
-        #if i == "container":
-            #container_extractor(dic,i) 
         value.update({i : dic.get(i)})
     return value
         
@@ -75,7 +79,7 @@ for index, app in enumerate(glob("AppStore/Apps/*/appfile.json",recursive=True))
             cmd             = "null"
         )
 
-        li.append(merge_two_dicts({"id" : index+1},a.__repr__()))
+        li.append(replace_dict_id(a.__repr__(),index+1))
 
     
 
