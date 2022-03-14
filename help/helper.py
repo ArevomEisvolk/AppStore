@@ -3,7 +3,7 @@ from glob import glob
 import json, time
 from pathlib import Path
 import sys
-sys.path.append("/mnt/Datengrab/python/AreOS-Backend")
+sys.path.append("/Users/are/Documents/Github/AreOS-Backend")
 from datastructs.docker_app import App
 
 def merge_two_dicts(x, y):
@@ -53,7 +53,7 @@ for index, app in enumerate(glob("AppStore/Apps/*/appfile.json",recursive=True))
             category_font   = "cloud-outline",
             port_map        = dic["container"]["ports"][0]["host"] if len(dic["container"]["ports"]) != 0 else "null",
             image_version   = dic["container"]["image"].split(":")[1],
-            tip             = dic["tips"],
+            tip             = "[]" if dic["tips"] == {} else json.dumps(dic["tips"]["before_install"]),
             envs            = dic["container"]["envs"],
             ports           = dic["container"]["ports"],
             volumes         = dic["container"]["volumes"],
