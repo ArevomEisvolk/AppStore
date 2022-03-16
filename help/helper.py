@@ -3,7 +3,7 @@ from glob import glob
 import json, time
 from pathlib import Path
 import sys
-sys.path.append("/Users/are/Documents/Github/AreOS-Backend")
+sys.path.append("/mnt/Datengrab/python/AreOS-Backend")
 from datastructs.docker_app import App
 
 def merge_two_dicts(x, y):

@@ -3,7 +3,7 @@ from glob import glob
 import json, time
 from pathlib import Path
 import sys
-sys.path.append("/Users/are/Documents/Github/AreOS-Backend")
+sys.path.append("/mnt/Datengrab/python/AreOS-Backend")
 from untils.config import Config_Reader
 
 def merge_two_dicts(x, y):
@@ -28,15 +28,15 @@ for index, app in enumerate(glob("AppStore/Apps/*/appfile.json",recursive=True))
                 appfile = json.load(file)
                 is_app.add("".join(appfile["category"]))
 
-with open("/Users/are/Documents/Github/AreOS-Backend/AppStore/category-list.json", "r") as cat:
+with open("AppStore/category-list.json", "r") as cat:
+    li.append({'name': 'All', 'icon': 'apps', 'description': 'All Apps', 'id': 0,"count" : 1})
     for index, cat in enumerate(json.load(cat)):
         if cat["name"] in is_app:
             li.append(merge_two_dicts(cat,{"id":index+1, "count" : 1}))
             lu.append({"category": cat["name"] , "id": index+1})
             
-    li.append({'name': 'All', 'icon': 'apps', 'description': 'All Apps', 'id': 0,"count" : 1})
-
-a = Config_Reader("/Users/are/Documents/Github/AreOS-Backend/config/config.ini")
+    
+a = Config_Reader("config/config.ini")
 
 a.write_category(str(lu))
 
