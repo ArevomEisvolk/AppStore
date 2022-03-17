@@ -1,3 +1,4 @@
+
 import os
 from glob import glob
 import json, time
@@ -8,18 +9,9 @@ if sys.platform == "linux":
 else:
      sys.path.append("/Users/are/Documents/Github/AreOS-Backend")
 from untils.config import Config_Reader
+from untils.text_transform import merge_two_dicts
 
-def merge_two_dicts(x, y):
-    """Given two dictionaries, merge them into a new dict as a shallow copy."""
-    z = x.copy()
-    z.update(y)
-    print(z)
-    return z
 
-def replace_dict_id(x,  ids):
-    """Given two dictionaries, merge them into a new dict as a shallow copy."""
-    x["id"] = ids
-    return x
 
 li = []
 is_app = set()
@@ -36,12 +28,17 @@ with open("AppStore/category-list.json", "r") as cat:
     for index, cat in enumerate(json.load(cat)):
         if cat["name"] in is_app:
             li.append(merge_two_dicts(cat,{"id":index+1, "count" : 1}))
+
             lu.append({"category": cat["name"] , "id": index+1})
             
-    
-a = Config_Reader("config/config.ini")
 
-a.write_category(str(lu))
 
-with open(f"{Path(os.path.dirname(os.path.abspath(__file__))).parent.parent}/config/appstore/category.json", "w") as af:
-    json.dump(li, af, indent=4)
+
+ids = {}
+for i in li:
+    ids.update({str(i.get("id")) : i.get("name")})
+        
+
+Config_Reader().write_value("appstore","app_ids",str(ids))
+
+

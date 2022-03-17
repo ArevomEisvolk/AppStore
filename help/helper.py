@@ -3,15 +3,15 @@ from glob import glob
 import json, time
 from pathlib import Path
 import sys
-sys.path.append("/mnt/Datengrab/python/AreOS-Backend")
+if sys.platform == "linux":
+    sys.path.append("/mnt/Datengrab/python/AreOS-Backend")
+else:
+     sys.path.append("/Users/are/Documents/Github/AreOS-Backend")
 from datastructs.docker_app import App
+from untils.config import Config_Reader
+from untils.text_transform import merge_two_dicts
 
-def merge_two_dicts(x, y):
-    """Given two dictionaries, merge them into a new dict as a shallow copy."""
-    z = x.copy()
-    z.update(y)
-    print(z)
-    return z
+
 
 def replace_dict_id(x,  ids):
     """Given two dictionaries, merge them into a new dict as a shallow copy."""
@@ -83,6 +83,6 @@ for index, app in enumerate(glob("AppStore/Apps/*/appfile.json",recursive=True))
 
     
 
-with open(f"{Path(os.path.dirname(os.path.abspath(__file__))).parent.parent}/config/appstore.json", "w") as af:
+with open(f"{Path(os.path.dirname(os.path.abspath(__file__))).parent.parent}/config/appstore/appstore.json", "w") as af:
     json.dump({"list" : li, "community" : [], "recommend" : []}, af, indent=4)
         
