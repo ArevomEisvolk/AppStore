@@ -53,7 +53,7 @@ for index, app in enumerate(glob("AppStore/Apps/*/appfile.json",recursive=True))
             category_font   = "cloud-outline",
             port_map        = dic["container"]["ports"][0]["host"] if len(dic["container"]["ports"]) != 0 else "null",
             image_version   = dic["container"]["image"].split(":")[1],
-            tip             = "[]" if dic["tips"] == {} else json.dumps(dic["tips"]["before_install"]),
+            tip             = None if dic["tips"] == {} else json.dumps(dic["tips"]["before_install"]),
             envs            = dic["container"]["envs"],
             ports           = dic["container"]["ports"],
             volumes         = dic["container"]["volumes"],
