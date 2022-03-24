@@ -1,0 +1,99 @@
+{
+    "version": "2.1",
+    "title": "libreoffice",
+    "name": "Libreoffice",
+    "icon": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/libreoffice-logo.png",
+    "tagline": "The productivity platform that keeps you in control",
+    "overview": "Nextcloud puts your data at your fingertips, under your control. Store your documents, calendar, contacts and photos on a server at home, at one of our providers or in a data center you trust.",
+    "thumbnail": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/libreoffice-logo.png",
+    
+    "screenshots": [
+    ],
+    "category": [
+        "Cloud"
+    ],
+    "developer": {
+        "name": "LibreOffice",
+        "website": "https://www.libreoffice.org/",
+        "donate_text": "", 
+        "donate_link": ""
+    },
+    "adaptor": {
+        "name": "Me",
+        "website": "https://www.casaos.io",
+        "donate_text": "", 
+        "donate_link": ""
+    },
+    "container": {
+        "image": "linuxserver/libreoffice:latest",
+        "shell": "bash",
+        "privileged": false,
+        "network_model": "bridge",
+        "web_ui": {
+            "http": "3000",
+            "https": "3001",
+            "path": "/"
+        },
+        "health_check": "",
+        "envs": [
+            {
+                "key": "PUID",
+                "value": "1000",
+                "configurable": "no",
+                "description": "TimeZone"
+            },
+            {
+                "key": "PGID",
+                "value": "1000",
+                "configurable": "no",
+                "description": "TimeZone"
+            },
+            {
+                "key": "TZ",
+                "value": "$TZ",
+                "configurable": "no",
+                "description": "TimeZone"
+            } 
+        ],
+        "ports": [
+            {
+                "container": "3000",
+                "host": "3000"
+                
+            },
+            {
+                "container": "3000",
+                "host": "3001"
+                
+            }
+        ],
+        "volumes": [
+            {
+                "container": "/config",
+                "host": "/DATA/AppData/$AppID/config"
+            }
+        ],
+        "devices": [],
+        "constraints": {
+            "min_memory": 512,
+            "min_storage": 2048
+        },
+        "restart_policy": "unless-stopped",
+        "sysctls": [],
+        "cap_add": {},
+        "labels": []
+    },
+    "abilities": {
+        "notification": false,
+        "widgets": false,
+        "authentication": false,
+        "search": false,
+        "upnp": false
+    },
+    "tips": {},
+    "changelog":{
+        "latest_updates": "",
+        "url": ""
+    },
+    "latest_update_date": "1640592011"
+}
