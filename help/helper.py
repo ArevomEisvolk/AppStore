@@ -8,8 +8,7 @@ if sys.platform == "linux":
 else:
      sys.path.append("/Users/are/Documents/Github/AreOS-Backend")
 from datastructs.docker_app import App
-from untils.config import Config_Reader
-from untils.text_transform import merge_two_dicts
+
 
 
 
@@ -46,7 +45,6 @@ for index, app in enumerate(glob("AppStore/Apps/*/appfile.json",recursive=True))
             title           = dic["title"],
             description     = dic["tagline"],
             tagline         = dic["tagline"],
-            web_ui          = dic["container"]["web_ui"],
             icon            = dic["icon"],
             screenshot_link = dic["screenshots"],
             category        = dic["category"],
@@ -60,23 +58,13 @@ for index, app in enumerate(glob("AppStore/Apps/*/appfile.json",recursive=True))
             devices         = dic["container"]["devices"],
             network_model   = dic["container"]["network_model"],
             image           = dic["container"]["image"].split(":")[0],
-            index           = "/",
-            created_at      = time.time(),
-            updated_at      = time.time(),
-            state           = "",
-            author          = dic["adaptor"]["name"],
+            index           = dic["container"]["web_ui"]["path"],
             min_memory      = dic["container"]["constraints"]["min_memory"],
             min_disk        = dic["container"]["constraints"]["min_storage"],
             thumbnail       = dic["thumbnail"],
-            healthy         = "",
-            plugins         = "null",
-            origin          = "offical",
-            type            = 0,
             developer       = dic["developer"]["name"],
-            host_name       = "",
             privileged      = dic["container"]["privileged"],
             cap_add         = dic["container"]["cap_add"],
-            cmd             = "null"
         )
 
         li.append(replace_dict_id(a.__repr__(),index+1))
