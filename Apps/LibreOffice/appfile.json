@@ -1,6 +1,6 @@
 {
     "version": "2.1",
-    "title": "libreoffice",
+    "title": "Libreoffice",
     "name": "Libreoffice",
     "icon": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/libreoffice-logo.png",
     "tagline": "The productivity platform that keeps you in control",
@@ -10,7 +10,8 @@
     "screenshots": [
     ],
     "category": [
-        "Cloud"
+        "Documents",
+        "Notes"
     ],
     "developer": {
         "name": "LibreOffice",
@@ -31,7 +32,6 @@
         "network_model": "bridge",
         "web_ui": {
             "http": "3000",
-            "https": "3001",
             "path": "/"
         },
         "health_check": "",
@@ -59,11 +59,6 @@
             {
                 "container": "3000",
                 "host": "3000"
-                
-            },
-            {
-                "container": "3000",
-                "host": "3001"
                 
             }
         ],
