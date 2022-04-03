@@ -46,6 +46,7 @@ for index, app in enumerate(glob("AppStore/Apps/*/appfile.json",recursive=True))
             description     = dic["tagline"],
             tagline         = dic["tagline"],
             icon            = dic["icon"],
+            web_ui          = dic["container"]["web_ui"],
             screenshot_link = dic["screenshots"],
             category        = dic["category"],
             category_font   = "cloud-outline",
