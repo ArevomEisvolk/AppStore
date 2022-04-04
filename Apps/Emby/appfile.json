@@ -1,0 +1,76 @@
+{
+    "version": "2.1",
+    "title": "Emby",
+    "name": "Emby",
+    "icon": "https://github.com/ArevomEisvolk/AppStore/blob/main/Apps/Emby/icon.png?raw=true",
+    "tagline": "Emby brings together your personal videos, music, photos, and live television.",
+    "overview": "Emby Server is a home media server built on top of other popular open source technologies such as Service Stack, jQuery, jQuery mobile, and .NET Core.",
+    "thumbnail": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/libreoffice-logo.png",
+    "screenshots": [],
+    "category": [
+        "Media"
+    ],
+    "developer": {
+        "name": "Emby LLC",
+        "website": "https://emby.media/index.html"
+    },
+    "container": {
+        "image": "emby/embyserver:latest",
+        "shell": "bash",
+        "privileged": false,
+        "network_model": "bridge",
+        "web_ui": {
+            "http": "8099",
+            "path": "/"
+        },
+        "envs": [
+            {
+                "key": "UID",
+                "value": "1000"
+            },
+            {
+                "key": "GID",
+                "value": "100"
+            },
+            {
+                "key": "GIDLIST",
+                "value": "100"
+            }
+        ],
+        "ports": [
+            {
+                "container": "8096",
+                "host": "8099"
+            },
+            {
+                "container": "8920",
+                "host": "8920"
+            }
+        ],
+        "volumes": [
+            {
+                "container": "/config",
+                "host": "/DATA/AppData/$AppID/config"
+            }
+        ],
+        "devices": [
+            {
+                "container": "/dev/dri",
+                "host": "/dev/dri"
+            },
+            {
+                "container": "/dev/vchiq",
+                "host": "/dev/vchiq"
+            }
+        ],
+        "constraints": {
+            "min_memory": 512,
+            "min_storage": 2048
+        },
+        "restart_policy": "unless-stopped",
+        "sysctls": [],
+        "cap_add": {},
+        "labels": []
+    },
+    "tips": {}
+}

@@ -2,7 +2,7 @@
     "version": "2.0",
     "title": "qBittorrent",
     "name": "qbittorrent",
-    "icon": "https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/qBittorrent/icon.png",
+    "icon": "https://github.com/ArevomEisvolk/AppStore/blob/main/Apps/qBittorrent/icon.png?raw=true",
     "tagline": "Free BitTorrent downloader",
     "overview": "The qBittorrent project aims to provide an open-source software alternative to µTorrent.",
     "thumbnail": "https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/qBittorrent/thumbnail.jpg",

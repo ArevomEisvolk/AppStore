@@ -2,7 +2,7 @@
     "version": "2.0",
     "title": "Nextcloud",
     "name": "nextcloud",
-    "icon": "https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Nextcloud/icon.png",
+    "icon": "https://github.com/ArevomEisvolk/AppStore/blob/main/Apps/Nextcloud/icon.png?raw=true",
     "tagline": "The productivity platform that keeps you in control",
     "overview": "Nextcloud puts your data at your fingertips, under your control. Store your documents, calendar, contacts and photos on a server at home, at one of our providers or in a data center you trust.",
     "thumbnail": "https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Nextcloud/thumbnail.jpg",

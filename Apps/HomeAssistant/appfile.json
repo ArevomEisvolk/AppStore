@@ -2,7 +2,7 @@
     "version": "2.0",
     "title": "Home Assistant",
     "name": "homeassistant",
-    "icon": "https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/HomeAssistant/icon.png",
+    "icon": "https://github.com/ArevomEisvolk/AppStore/blob/main/Apps/HomeAssistant/icon.png?raw=true",
     "tagline": "Awaken your home",
     "overview": "Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. Perfect to run on a Raspberry Pi or a local server.",
     "thumbnail": "https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/HomeAssistant/thumbnail.jpg",

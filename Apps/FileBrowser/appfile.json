@@ -2,7 +2,7 @@
     "version": "2.0",
     "title": "FileBrowser",
     "name": "filebrowser",
-    "icon": "https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/FileBrowser/icon.png",
+    "icon": "https://github.com/ArevomEisvolk/AppStore/blob/main/Apps/FileBrowser/icon.png?raw=true",
     "tagline": "Upload, delete, preview, rename, edit and share your files.",
     "overview": "File Browser - Webbased File Browser including sharing functions etc.",
     "thumbnail": "https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/FileBrowser/thumbnail.jpg",

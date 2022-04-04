@@ -2,7 +2,7 @@
     "version": "2.0",
     "title": "Sonarr",
     "name": "sonarr",
-    "icon": "https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sonarr/icon.png",
+    "icon": "https://github.com/ArevomEisvolk/AppStore/blob/main/Apps/Sonarr/icon.png?raw=true",
     "tagline": "The PVR for Usenet and BitTorrent users",
     "overview": "Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.",
     "thumbnail": "https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Radarr/thumbnail.jpg",
