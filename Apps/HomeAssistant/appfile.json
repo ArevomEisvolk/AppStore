@@ -22,13 +22,13 @@
         "donate_link": ""
     },
     "adaptor": {
-        "name": "CasaOS Team",
-        "website": "https://www.casaos.io",
+        "name": "Team",
+        "website": "https://www.$USERNAME.io",
         "donate_text": "", 
         "donate_link": ""
     },
     "support": "https://discord.gg/knqAbbBbeX",
-    "website": "https://www.casaos.io",
+    "website": "https://www.$USERNAME.io",
     "container": {
         "image": "linuxserver/homeassistant:latest",
         "shell": "bash",
@@ -58,7 +58,14 @@
                 "description": "Run HomeAssistant as specified gid."
             }
         ],
-        "ports": [],
+        "ports": [            {
+            "container": "8123",
+            "host": "8123",
+            "type": "tcp",
+            "allocation": "automatic",
+            "configurable": "advanced",
+            "description": "WebUI Port"
+        }],
         "volumes": [
             {
                 "container": "/config",

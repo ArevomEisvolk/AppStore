@@ -21,7 +21,7 @@
     },
     "adaptor": {
         "name": "Me",
-        "website": "https://www.casaos.io",
+        "website": "https://www.$USERNAME.io",
         "donate_text": "", 
         "donate_link": ""
     },

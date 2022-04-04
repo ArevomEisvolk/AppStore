@@ -3,8 +3,8 @@
     "title": "PhotoPrism",
     "name": "photoprism",
     "icon": "https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/PhotoPrism/icon.svg",
-    "tagline": "Browsing, organizing & sharing your photo collection",
-    "overview": "PhotoPrism® is an AI-powered app for browsing, organizing & sharing your photo collection. It makes use of the latest technologies to tag and find pictures automatically without getting in your way. You can run it at home, on a private server, or in the cloud.",
+    "tagline": "Browsing, organizing and sharing your photo collection",
+    "overview": "PhotoPrism® is an AI-powered app for browsing, organizing and sharing your photo collection. It makes use of the latest technologies to tag and find pictures automatically without getting in your way. You can run it at home, on a private server, or in the cloud.",
     "thumbnail": "https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/PhotoPrism/thumbnail.jpg",
     "screenshots": [
         "https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/PhotoPrism/screenshot-1.jpg",
@@ -21,13 +21,13 @@
         "donate_link": ""
     },
     "adaptor": {
-        "name": "CasaOS Team",
-        "website": "https://www.casaos.io",
+        "name": "Team",
+        "website": "https://www.$USERNAME.io",
         "donate_text": "", 
         "donate_link": ""
     },
     "support": "https://discord.gg/knqAbbBbeX",
-    "website": "https://www.casaos.io",
+    "website": "https://www.$USERNAME.io",
     "container": {
         "image": "photoprism/photoprism:latest",
         "shell": "bash",
@@ -53,7 +53,7 @@
             },
             {
                 "key": "PHOTOPRISM_ADMIN_PASSWORD",
-                "value": "casaos",
+                "value": "$USERPASSWORT",
                 "configurable": "basic",
                 "description": "The password of admin"
             }
@@ -114,7 +114,7 @@
             },
             {
                 "content": "Password: ",
-                "value": "casaos"
+                "value": "$USERNAME"
             }
         ]
     },
