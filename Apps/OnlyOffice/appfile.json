@@ -3,8 +3,8 @@
     "title": "OnlyOffice",
     "name": "OnlyOffice",
     "icon": "https://github.com/ArevomEisvolk/AppStore/blob/main/Apps/OnlyOffice/icon.png?raw=true",
-    "tagline": "Calibre-web - ein schickes Webfrontend für eure E-books",
-    "overview": "Calibre-web ist eine ansehnliche web-basierte App, mit denen ihr eure E-Book Sammlung verwalten könnt.",
+    "tagline": "Feature-rich web-based office suite with a vast range of collaborative capabilities  ",
+    "overview": "ONLYOFFICE Document Server is an online office suite comprising viewers and editors for texts, spreadsheets and presentations, fully compatible with Office Open XML formats: .docx, .xlsx, .pptx and enabling collaborative editing in real time.",
     "thumbnail": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/calibre-web-icon.png",
     "screenshots": [],
     "category": [
@@ -15,7 +15,7 @@
         "website": "https://helpcenter.onlyoffice.com/de/installation.aspx"
     },
     "container": {
-        "image": "onlyoffice/documentserver:latest",
+        "image": "onlyoffice/documentserver:6.4",
         "shell": "bash",
         "privileged": false,
         "network_model": "bridge",
@@ -40,11 +40,11 @@
                 "container": "/app/onlyoffice/DocumentServer/data"
             },
             {
-            	"host": "/DATA/AppData/$AppID/lib/onlyoffice",
+            	"host": "/var/lib/onlyoffice",
                 "container": "/app/onlyoffice/DocumentServer/lib"
             },
             {
-            	"host": "/DATA/AppData/$AppID/lib/postgresql",
+            	"host": "/var/lib/postgresql",
                 "container": "/app/onlyoffice/DocumentServer/db"
             }
 
