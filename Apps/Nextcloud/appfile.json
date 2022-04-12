@@ -43,7 +43,7 @@
         "ports": [
             {
                 "container": "80",
-                "host": "10080",
+                "host": "1080",
                 "type": "tcp",
                 "allocation": "preferred",
                 "configurable": "advanced",
@@ -51,7 +51,7 @@
             },
             {
                 "container": "443",
-                "host": "10443",
+                "host": "1443",
                 "type": "tcp",
                 "allocation": "preferred",
                 "configurable": "advanced",
