@@ -41,6 +41,14 @@
 		"envs": [],
 		"ports": [
 			{
+				"container": "3000",
+				"host": "3000",
+				"type": "tcp",
+				"allocation": "automatic",
+				"configurable": "no",
+				"description": ""
+			},
+			{
 				"container": "53",
 				"host": "53",
 				"type": "tcp",
@@ -52,14 +60,6 @@
 				"container": "53",
 				"host": "53",
 				"type": "udp",
-				"allocation": "automatic",
-				"configurable": "no",
-				"description": ""
-			},
-			{
-				"container": "3000",
-				"host": "3000",
-				"type": "tcp",
 				"allocation": "automatic",
 				"configurable": "no",
 				"description": ""
