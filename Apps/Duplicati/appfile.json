@@ -79,7 +79,7 @@
 			},
 			{
 				"container": "/backups",
-				"host": "/DATA/Duplicati/backups",
+				"host": "/DATA/AppData/$AppID/Duplicati/backups",
 				"mode": "rw",
 				"allocation": "automatic",
 				"configurable": "no",
@@ -87,7 +87,7 @@
 			},
 			{
 				"container": "/source",
-				"host": "/DATA/Duplicati/source",
+				"host": "/DATA/AppData/$AppID/Duplicati/source",
 				"mode": "rw",
 				"allocation": "automatic",
 				"configurable": "no",

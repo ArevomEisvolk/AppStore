@@ -15,10 +15,10 @@
         "website": "https://helpcenter.onlyoffice.com/de/installation.aspx"
     },
     "container": {
-        "image": "onlyoffice/documentserver:6.4",
+        "image": "jiriks74/onlyoffice-documentserver-arm64:latest",
         "shell": "bash",
         "privileged": false,
-        "network_model": "host",
+        "network_model": "bridge",
         "web_ui": {
             "http": "80",
             "path": "/"
@@ -28,10 +28,6 @@
             {
                 "container": "80",
                 "host": "9999"
-            },
-            {
-                "container": "5672",
-                "host": "5672"
             }
         ],
         "volumes": [
