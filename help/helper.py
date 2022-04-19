@@ -36,7 +36,9 @@ def log(inou):
     
 li =[]
 
-for index, app in enumerate(glob("AppStore/Apps/*/appfile.json",recursive=True)):
+
+for index, app in enumerate(glob(f"AppStore/Apps/*/appfile-{os.uname().machine}.json",recursive=True)):
+    print(app)
     with open(app, "r") as file:
         appfile = json.load(file)
         dic = get_dict_value(appfile,"title","name","icon","thumbnail","screenshots","container","tagline","category","tips","developer","adaptor","constraints",)

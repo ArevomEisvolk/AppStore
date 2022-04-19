@@ -1,0 +1,55 @@
+{
+    "version": "3",
+    "title": "Minecraft-Server",
+    "name": "Minecraft-Server",
+    "icon": "https://github.com/ArevomEisvolk/AppStore/blob/main/Apps/Minecraft-Server/icon.png?raw=true",
+    "tagline": "Minecraft server with select-able version ",
+    "overview": "This docker image provides a Minecraft Server that will automatically download the latest stable version at startup. You can also run/upgrade to any specific version or the latest snapshot.",
+    "thumbnail": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/Minecraft-Server.png",
+    "screenshots": [],
+    "category": [
+        "Documents"
+    ],
+    "developer": {
+        "name": "itzg",
+        "website": "https://github.com/itzg/docker-minecraft-server"
+    },
+    "container": {
+        "image": "itzg/minecraft-server:latest",
+        "shell": "bash",
+        "privileged": false,
+        "network_model": "bridge",
+        "web_ui": {
+            "http": "80",
+            "path": "/"
+        },
+        "envs": [
+            {
+                "key": "EULA",
+                "value": "TRUE"
+            }
+        ],
+        "ports": [
+            {
+                "container": "25565",
+                "host": "25565"
+            }
+        ],
+        "volumes": [
+            {
+            	"host": "/DATA/AppData/$AppID/data",
+                "container": "/data"
+            }
+        ],
+        "devices": [],
+        "constraints": {
+            "min_memory": 512,
+            "min_storage": 2048
+        },
+        "restart_policy": "unless-stopped",
+        "sysctls": [],
+        "cap_add": {},
+        "labels": []
+    },
+    "tips": {}
+}
