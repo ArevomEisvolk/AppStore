@@ -8,7 +8,7 @@
     "thumbnail": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/Minecraft-Server.png",
     "screenshots": [],
     "category": [
-        "Documents"
+        "Games"
     ],
     "developer": {
         "name": "itzg",
@@ -20,7 +20,7 @@
         "privileged": false,
         "network_model": "bridge",
         "web_ui": {
-            "http": "80",
+            "http": "25565",
             "path": "/"
         },
         "envs": [

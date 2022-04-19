@@ -17,7 +17,7 @@ is_app = set()
 lu = []
 
 
-for index, app in enumerate(glob("AppStore/Apps/*/appfile.json",recursive=True)):
+for index, app in enumerate(glob(f"AppStore/Apps/*/appfile-{os.uname().machine}.json",recursive=True)):
             with open(app, "r") as file:
                 appfile = json.load(file)
                 [is_app.add("".join(app)) for app in appfile["category"]]
